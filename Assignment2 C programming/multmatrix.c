@@ -20,7 +20,7 @@ void main()
         for (j = 0; j < 3; ++j) 
         {
             printf("%d   ", multiply[i][j]);
-            if (j == 6 - 1) 
-            {printf("\n\n");}
+            if (j == 3 - 1) 
+            printf("\n");
         }
 }
