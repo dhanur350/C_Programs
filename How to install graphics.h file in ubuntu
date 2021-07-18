@@ -1,0 +1,75 @@
+download libgraph.tar file link find in internet
+
+You can download it from here.
+
+First add the Universe repository (since some required packages are not available in main repository):
+
+sudo add-apt-repository universe
+sudo apt-get update
+
+Second install build-essential and some additional packages:
+
+For versions prior to 18.04:
+
+sudo apt-get install libsdl-image1.2 libsdl-image1.2-dev guile-1.8 \
+guile-1.8-dev libsdl1.2debian libart-2.0-dev libaudiofile-dev \
+libesd0-dev libdirectfb-dev libdirectfb-extra libfreetype6-dev \
+libxext-dev x11proto-xext-dev libfreetype6 libaa1 libaa1-dev \
+libslang2-dev libasound2 libasound2-dev build-essential
+
+For 18.04: From Ubuntu 18.04 guile-2.0 works and libesd0-dev is deprecated. For this you need to 
+
+add repositories of xenial in sources.list.
+
+sudo nano /etc/apt/sources.list
+
+Add these lines:
+
+deb http://us.archive.ubuntu.com/ubuntu/ xenial main universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ xenial main universe
+
+Fix apt-get update “the following signatures couldn’t be verified because the public key is not available”
+
+[chris@server ~]$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.QTeppiINUh --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5
+gpg: requesting key 437D05B5 from hkp server keyserver.ubuntu.com
+gpg: key 437D05B5: public key "Ubuntu Archive Automatic Signing Key " imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+[chris@server ~]$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.77TqYGKU7b --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
+gpg: requesting key C0B21F32 from hkp server keyserver.ubuntu.com
+gpg: key C0B21F32: public key "Ubuntu Archive Automatic Signing Key (2012) " imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+[chris@server ~]$ 
+
+Run sudo apt-get update. Then install packages using:
+
+sudo apt-get install libsdl-image1.2 libsdl-image1.2-dev guile-2.0 \
+guile-2.0-dev libsdl1.2debian libart-2.0-dev libaudiofile-dev \
+libesd0-dev libdirectfb-dev libdirectfb-extra libfreetype6-dev \
+libxext-dev x11proto-xext-dev libfreetype6 libaa1 libaa1-dev \
+libslang2-dev libasound2 libasound2-dev
+
+
+Now extract the downloaded libgraph-1.0.2.tar.gz file.
+
+Go to the extracted folder and run the following command:
+
+./configure
+make
+sudo make install
+sudo cp /usr/local/lib/libgraph.* /usr/lib
+
+in case you get libguile.h error while installing then 
+install this...
+
+sudo apt-get install libsdl-image1.2 libsdl-image1.2-dev guile-1.8 guile-1.8-dev libsdl1.2debian libart-2.0-dev libaudiofile-dev libesd0-dev libdirectfb-dev libdirectfb-extra libfreetype6-dev libxext-dev x11proto-xext-dev libfreetype6 libaa1 libaa1-dev libslang2-dev libasound2 libasound2-dev
+
+then repeat last step
+
+
+NOW WE CAN USE GRAPHICS.H FILE IN UBUNTU
+
+ENJOY!!!
