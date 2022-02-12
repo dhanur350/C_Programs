@@ -1,0 +1,54 @@
+#include <graphics.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <conio.h>
+
+ptr(int x,int y, int size)
+{
+ rectangle(x,y,x+size,y+size);
+ arc(x,y+size,0,90,size);
+ arc(x+size,y+size,90,180,size);
+ arc(x+size,y,180,270,size);
+ arc(x+size,y,180,270,size);
+ arc(x,y,270,360,size);
+
+}
+
+
+int main(void)
+{
+    /* request auto detection */
+   int gdriver = DETECT, gmode, errorcode;
+   int i,j,xin=150,yin=150;
+   int row=3,col=5,size=70;
+
+   /* initialize graphics and local
+   variables */
+   initgraph(&gdriver, &gmode, "c:\\turboc3\\bgi\\");
+
+
+
+   //setcolor(RED);
+
+   /* draw arc */
+   //arc(midx, midy, stangle, endangle, radius);
+   ptr(30,30,50);outtextxy(35,85,"Pattern");
+   for(i=0;i<row;i++)
+   {
+	xin = 200;
+
+	for(j=0;j<col;j++)
+	{
+	  setcolor(j);
+	  ptr(xin+j*size,yin,size);
+
+	}
+	yin = yin+size;
+   }
+   outtextxy(320,335,"Tiling pattern");
+   /* clean up */
+   getch();
+   closegraph();
+   return 0;
+}
+

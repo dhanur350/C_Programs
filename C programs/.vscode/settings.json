@@ -1,0 +1,24 @@
+{
+    "files.associations": {
+        "1.C": "cpp",
+        "DHANUR1.C": "cpp",
+        "dikshit.C": "cpp",
+        "CONDITIO.C": "cpp",
+        "FN3.C": "cpp",
+        "SQR.C": "cpp",
+        "2.C": "cpp",
+        "3.C": "cpp",
+        "4.C": "cpp",
+        "5.C": "cpp",
+        "6.C": "cpp",
+        "CHNGNO.C": "cpp",
+        "DISPAL~1.C": "cpp",
+        "EVENODD.C": "cpp",
+        "FACT.C": "cpp",
+        "FTREC.C": "cpp",
+        "FU.C": "cpp",
+        "LOOP.C": "cpp",
+        "OCTAL.C": "cpp",
+        "OPTSWT.C": "cpp"
+    }
+}
