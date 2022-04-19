@@ -1,22 +1,23 @@
 #include <graphics.h>
+#include <stdio.h>
 
 void draw(int x, int y, int h, int k)
 {
-    putpixel(h + x, k + y, GREEN);
+    // putpixel(h + x, k + y, WHITE);
+    // delay(10);
+    //  putpixel(h - x, k + y, WHITE);
+    //  delay(10);
+    putpixel(h + x, k - y, WHITE);
     delay(10);
-    putpixel(h - x, k + y, RED);
+    putpixel(h - x, k - y, WHITE);
     delay(10);
-    putpixel(h + x, k - y, BLUE);
+    putpixel(h + y, k + x, WHITE);
     delay(10);
-    putpixel(h - x, k - y, YELLOW);
+    putpixel(h - y, k + x, WHITE);
     delay(10);
-    putpixel(h + y, k + x, GREEN);
+    putpixel(h + y, k - x, WHITE);
     delay(10);
-    putpixel(h - y, k + x, RED);
-    delay(10);
-    putpixel(h + y, k - x, BLUE);
-    delay(10);
-    putpixel(h - y, k - x, YELLOW);
+    putpixel(h - y, k - x, WHITE);
     delay(10);
 }
 
@@ -24,12 +25,12 @@ int main()
 {
     int gd = DETECT, gm;
     initgraph(&gd, &gm, NULL);
-    int x, y, h, k, r, d;
-    printf("  ");
+    int x, y, h = 150, k = 150, r = 100, d;
+    /*printf("  ");
     printf("  Enter the radius of circle : ");
-    scanf("%d",&r);
+    scanf("%d", &r);
     printf("\n  Enter the coordinate of centre of circle :");
-    scanf("%d%d",&h,&k);
+    scanf("%d%d", &h, &k);*/
     x = 0;
     y = r;
     d = 1 - r;
@@ -48,7 +49,6 @@ int main()
         }
         draw(x, y, h, k);
     }
-    getch();
     closegraph();
     return 0;
 }

@@ -6,17 +6,16 @@ void main()
     printf(" Input the number of elements to store in the array (max 15) : ");
     scanf("%d", &n);
     reve(n);
-    
 }
 void reve(int n)
 {
-    int i, arr1[15],*pointer;
+    int i, arr1[15], *pointer;
     pointer = &arr1[0]; // pointer stores the address of base array arr1
     printf(" Input %d number of elements in the array : \n", n);
     for (i = 0; i < n; i++)
     {
         printf(" element - %d : ", i + 1);
-        scanf("%d", pointer); //accept the address of the value
+        scanf("%d", pointer); // accept the address of the value
         pointer++;
     }
 

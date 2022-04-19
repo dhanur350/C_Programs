@@ -1,0 +1,13 @@
+https://chat.whatsapp.com/L3FfsXp1F1WBsrI5BsAqOz
+
+There are 3 steps:-
+1. Function Declaration (Function Prototyping).
+
+2. Function Calling
+
+3. Function Definition 
+
+1. Name of the function
+
+main() fn wo integer value kaha jari hai  
+
