@@ -3,10 +3,10 @@
 
 void draw(int x, int y, int h, int k)
 {
-    // putpixel(h + x, k + y, WHITE);
-    // delay(10);
-    //  putpixel(h - x, k + y, WHITE);
-    //  delay(10);
+    putpixel(h + x, k + y, WHITE);
+    delay(10);
+    putpixel(h - x, k + y, WHITE);
+    delay(10);
     putpixel(h + x, k - y, WHITE);
     delay(10);
     putpixel(h - x, k - y, WHITE);
@@ -26,11 +26,11 @@ int main()
     int gd = DETECT, gm;
     initgraph(&gd, &gm, NULL);
     int x, y, h = 150, k = 150, r = 100, d;
-    /*printf("  ");
+    printf("  ");
     printf("  Enter the radius of circle : ");
     scanf("%d", &r);
     printf("\n  Enter the coordinate of centre of circle :");
-    scanf("%d%d", &h, &k);*/
+    scanf("%d%d", &h, &k);
     x = 0;
     y = r;
     d = 1 - r;
