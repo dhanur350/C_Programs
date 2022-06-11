@@ -11,13 +11,20 @@ int main()
     setbkcolor(GREEN); // rectangle color will be red
     setcolor(RED);
     circle(300, 200, 100);
-    circle(400, 200, 25);
-    setcolor(GREEN);
+    for (int i = 100; i < 400; i++)
+    {
+        circle(i, (), 25);
+    }
+    /*
+    setcolor(RED);
     circle(400, 200, 25);
     setcolor(RED);
     circle(200, 200, 25);
+    setcolor(RED);
     circle(300, 300, 25);
+    setcolor(RED);
     circle(300, 100, 25);
+    */
     delay(50000);
     closegraph();
     return 0;
