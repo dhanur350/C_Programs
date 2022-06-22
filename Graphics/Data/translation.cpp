@@ -1,7 +1,5 @@
 #include <graphics.h>
-
 using namespace std;
-
 // function to translate line
 void translateLine(int P[][2], int T[])
 {
