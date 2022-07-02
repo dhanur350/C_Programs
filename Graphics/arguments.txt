@@ -1,1 +1,8 @@
 -lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32
+
+
+//Parameters
+int gd=DETECT,gm;
+    initgraph(&gd,&gm,NULL);
+    initwindow(1366,768,"Arcs");
+    closegraph();
