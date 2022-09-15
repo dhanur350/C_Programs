@@ -19,7 +19,18 @@ void fcfs(){
     }
 }
 void priority(){
-    cout<<"Process priority ";
+    //Initialized array of vectors, this'll store string dynamically
+    vector<string> processes;
+    cout<<"Process priority of processes came in CPU Process Control Block"<<endl;
+    for(int i=0;i<4;i++){
+        char arr[10];
+        cin>>arr;
+        processes.push_back(arr);
+    }
+    cout<<"\n\nProcesses Priority as accoriding to CPU PCB is\n"<<endl;
+    for(int i = 0;i < processes.size();i++){
+        cout<<"No. "<<rand()<<" "<<processes[i]<<endl;
+    }
 }
 int main(void){
     /**
@@ -28,4 +39,5 @@ int main(void){
     fcfs();
     priority();
      */
+    
 }
